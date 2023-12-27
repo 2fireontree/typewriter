@@ -8,3 +8,5 @@ git commit -m "message"
 git push
 
 내용 수정함
+
+파일 위치를 옮겼음
