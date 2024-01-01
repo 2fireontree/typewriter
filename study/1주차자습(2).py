@@ -134,3 +134,44 @@ print(exStr.count("Java"))
 print(exStr.startswith("Python")) #True
 print(exStr.endswith("Python!!"))
 print(exStr.replace("Python", "Java"))
+
+"""
+list 관련 함수
+append() : 새로운 요소를 리스트 마지막에 추가. 하나의 요소만 추가 가능
+extend() : 새로운 요소들을 리스트 마지막에 추가. append와 비교 필요.
+insert(i, element) : 인덱스 i에 element 추가
+"""
+exList2 = [0, 1, 2, 3, 4, 5]
+exList2.append(6)
+print(exList2)
+
+#append와 extend 구분
+exList2.append([7, 8, 9, 10]) 
+print(exList2) #[0, 1, 2, 3, 4, 5, 6, [7, 8, 9, 10]]
+del exList2[7]
+
+exList2.extend([7, 8, 9, 10])
+print(exList2)
+
+exList3 = ["a", "b", "c", "d"]
+exList3.insert(2, "알파벳입니다.")
+print(exList3)
+
+"""
+insert 관련 메모
+"""
+# 음수 인덱스 삽입
+exList3 = ["a", "b", "c", "d"]
+exList3.insert(-1, "f")
+exList3.insert(-2, "e")
+print(exList3) 
+# ['a', 'b', 'c', 'e', 'f', 'd'] 가 출력
+# 음수 인덱스를 쓰면 맨 뒤에서부터 insert하지 않는다!
+
+# 건너 뛰어서 인덱스 삽입
+exList3 = [0, 1, 2, 3]
+exList3.insert(5, 5) 
+print(exList3) #[0, 1, 2, 3, 5]
+# print(exList3[5]) -> IndexError: list index out of range
+print(exList3[4])
+# 인덱스 4를 건너뛰고 인덱스 5에 insert를 했으나 인덱스 4에 insert됨
