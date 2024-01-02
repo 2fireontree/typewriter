@@ -54,5 +54,3 @@ print(num1 + num2) #300이 아니라 100200 이 출력됨
 print(num1 * 3) #300이 아니라 100100100 이 출력됨
 print(int(num1)+int(num2)) #int()을 통해서 정수로 변경함
 print(int(num1) * 3) #300
-
-#end

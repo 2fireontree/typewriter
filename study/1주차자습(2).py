@@ -175,5 +175,3 @@ print(exList3) #[0, 1, 2, 3, 5]
 # print(exList3[5]) -> IndexError: list index out of range
 print(exList3[4])
 # 인덱스 4를 건너뛰고 인덱스 5에 insert를 했으나 인덱스 4에 insert됨
-
-#end

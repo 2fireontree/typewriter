@@ -147,5 +147,3 @@ print(lambdaResult == defResult)
 
 mySquare = lambda x : x ** 2
 print(mySquare(4))
-
-#end

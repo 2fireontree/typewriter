@@ -142,5 +142,3 @@ print(exList3) #[0, 1, '아메리카노', 'new3', 'new4', '카페라떼', 'new6'
 
 del exList3[2:11:3]
 print(exList3) #[0, 1, 'new3', 'new4', 'new6', 6, 8, 9, 10]
-
-#end
