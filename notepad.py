@@ -1,2 +1,5 @@
-a,b=map(int,input().split())
-print([['>', '<'][a<b],'=='][a==b])
+#오늘 날짜
+
+from datetime import datetime
+date = str((datetime.today()))[:10]
+print(date)
