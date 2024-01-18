@@ -5,3 +5,6 @@ seaborn
 scipy
 jupyterlab
 jupyter
+statsmodels
+scikit-learn
+plotly
