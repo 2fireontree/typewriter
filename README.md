@@ -11,11 +11,11 @@
 
 ## 팀원 소개
 - 나한울 팀장 : 깃허브 주소 공유
-- 김영환 팀원 : 깃허브 주소 공유
+- 김영환 팀원 : https://github.com/younghwangit/
 - 양인선 팀원 : 깃허브 주소 공유
 - 이상훈 팀원 : 깃허브 주소 공유
 - 정소영 팀원 : 깃허브 주소 공유
-- 황유진 팀원 : 깃허브 주소 공유
+- 황유진 팀원 : https://github.com/yellayujin/
 
 
 
@@ -73,19 +73,29 @@ streamlit run app.py
 | load_data | data_collect.py | for loading dataset and creating new columns |
 
 
-### main()
-- main 함수는 ~~~
 
-```python
-def main():
-   # 코드 설명
-```
+### main()
+- [app.py](app.py) 파일 참조
+- 사이드바에서 원하는 자치구와 법정동을 선택합니다. 해당 지역의 실거래 데이터를 분석한 결과를 보여줍니다. 언어를 선택하여 해당 데이터를 영어로 볼 수 있습니다.
+- 첫 페이지에서는 서울시 전체 부동산 실거래 데이터를 분석한 결과를 보여줍니다.
+
+- `sgg_nm_sort: 자치구`
+- `selected_sgg_nm: 자치구 선택 셀렉트 박스 `
+- `selected_bjdong_nm: 법정동 선택 셀렉트 박스`
+- `lang: 선택한 언어`
+
+![](image1.png)
+![](image2.png)
+![](image3.png)
+![](image4.png)
+
+
 - 결과 이미지가 있으면 표시 
 
-### data_collect()
--  data_collect() 함수는 ~~~~
 
 ### load_data():
+- [data_collect.py](data_collect.py) 파일 참조
+
 - `load_data()` 함수는 전처리된 데이터의 데이터프레임을 추가 가공하는 함수입니다. `DEAL_YMD` 컬럼의 데이터를 문자열 데이터로 변환하여 형식을 통일했습니다. 그리고 `BLDG_AREA` 데이터를 활용하여 `Pyeong` 데이터를 생성하고 `Range()` 함수를 통해 범주화했습니다.
 
 - `df: csv파일의 형태로 출력한 데이터셋`
