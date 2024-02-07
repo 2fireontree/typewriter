@@ -85,14 +85,10 @@ streamlit run app.py
 - `lang: 선택한 언어`
 
 <p align = "center" width = "100%">
-  <img src = "./image1.png" width = "30%">
-  <img src = "./image2.png" width = "30%">
-</p>
-
-
-<p align = "center" width = "100%">
-  <img src = "./image3.png" width = "30%">
-  <img src = "./image4.png" width = "30%">
+  <img src = "./image1.png" width = "20%">
+  <img src = "./image2.png" width = "20%">
+  <img src = "./image3.png" width = "20%">
+  <img src = "./image4.png" width = "20%">
 </p>
 
 
