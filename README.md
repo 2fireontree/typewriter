@@ -84,10 +84,12 @@ streamlit run app.py
 - `selected_bjdong_nm: 법정동 선택 셀렉트 박스`
 - `lang: 선택한 언어`
 
-![](image1.png)
-![](image2.png)
-![](image3.png)
-![](image4.png)
+<p align = "center" width = "100%">
+  <img src = :"image1.png" width = "25%">
+  <img src = :"image1.png" width = "25%">
+  <img src = :"image1.png" width = "25%">
+  <img src = :"image1.png" width = "25%">
+</p>
 
 
 - 결과 이미지가 있으면 표시 
