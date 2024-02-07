@@ -19,7 +19,7 @@
 
 
 
-# 본 프로젝트에서 사용한 주요 개발환경 요약  (예시)
+# 본 프로젝트에서 사용한 주요 개발환경 요약
   + Programming Languages : Python(ver. 3.12.1)
   + Web Framework : Streamlit (ver. 1.31.0)
 
