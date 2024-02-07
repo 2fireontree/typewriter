@@ -86,33 +86,13 @@ def main():
 -  data_collect() 함수는 ~~~~
 
 ### load_data():
-- data_collect() 함수는 전처리된 데이터의 데이터프레임을 추가 가공하는 함수입니다. DEAL_YMD 컬럼의 데이터를 문자열 데이터로 변환하여 형식을 통일했습니다. 그리고 BLDG_AREA 데이터를 활용하여 Pyeong 데이터를 생성하고 Range() 함수를 통해 범주화했습니다.
+- `load_data()` 함수는 전처리된 데이터의 데이터프레임을 추가 가공하는 함수입니다. `DEAL_YMD` 컬럼의 데이터를 문자열 데이터로 변환하여 형식을 통일했습니다. 그리고 `BLDG_AREA` 데이터를 활용하여 `Pyeong` 데이터를 생성하고 `Range()` 함수를 통해 범주화했습니다.
 
-```python
-def load_data():
-  # 데이터 불러오기
-  # api 데이터 합치고 -> 2019, 2024 빼고, 제거한 변수를 뺸 것이 df고 df.csv파일 -> 텍스트화? 
+- `df: csv파일의 형태로 출력한 데이터셋`
+- `DEAL_YMD: 계약일`
+- `Pyeong: 평수 (BLDG_AREA/3.3)`
+- `Pyeong_range: 평수를 10평 단위로 범주화`
 
-  df=pd.read_csv('https://raw.githubusercontent.com/ghkstod/TIL/main/data.txt',encoding='utf-8',sep='\t')
-  
-  # 불필요한 컬럼1 제거
-  df.drop(['Column1'],axis=1,inplace=True)
-
-  # DEAL_YMD(계약일) 컬럼 가공
-  df['DEAL_YMD'] = df['DEAL_YMD'].astype(str)
-  df = df[~df['DEAL_YMD'].str.startswith('2019')]
-  df = df[~df['DEAL_YMD'].str.startswith('2024')]
-  df= df.drop_duplicates()
-
-  # Pyeong(평수) 데이터와 컬럼 생성
-  df['Pyeong']=df['BLDG_AREA']/3.3
-  df['Pyeong']=df['Pyeong'].astype('int64')
-
-  # Pyeong 범주화
-  df['Pyeong_range']=df['Pyeong'].apply(Range)
-
-  return df
-```
 
 ## 코드 에러 문의 
 - 메뉴 `Issues`-`New Issues`-`메모 남기기`-`Submit new issue`
