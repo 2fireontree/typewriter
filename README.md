@@ -1,6 +1,10 @@
 # 수정 필요 부분
-- 테스트 준비 및 방법: git clone
-- 데모페이지
+- 프로젝트의 목적: 프로젝트에 맞춰서 적기
+- 팀원 소개: 팀원들의 깃허브 주소 공유하기
+- 테스트 준비 및 방법: git clone에 각자의 repo 주소 적기
+- 데모페이지: 총 완성된 스트림릿 페이지 적기
+- 주요 메서드 설명 추가
+- 완성된 발표자료 pdf 파일 추가
 
 # 프로젝트의 목적
 - 본 프로젝트는 부동산 데이터를 활용하여 대시보드를 개발하는 목적은 부동산 시장 동향을 시각화하고 사용자에게 부동산 투자 결정을 돕기 위함입니다. 이를 통해 사용자는 지역별 가격 변동, 투자 수익률 예측 및 부동산 시장의 트렌드를 쉽게 파악하고 최적의 부동산 투자 전략을 수립할 수 있도록 도와주기 위함입니다.
@@ -65,8 +69,8 @@ streamlit run app.py
 
 | Functions | Location | Description |
 |---|---|---|
-| main | app.py  | for deploy |
-| load_api | data_collect.py | for collecting data from API |
+| main #수정해야함 | app.py  | for deploy |
+| load_api | data_collect.py | for collecting data from API | #이거의 역할이 이게 맞나? 여러가지가 섞인 거 같은데?
 
 ### main()
 - main 함수는 ~~~
@@ -79,11 +83,27 @@ def main():
 ### data_collect()
 -  data_collect() 함수는 ~~~~
 
+### load_data():
+- 
+
+```python
+def load_data():
+    df=pd.read_csv('https://raw.githubusercontent.com/ghkstod/TIL/main/data.txt',encoding='utf-8',sep='\t')
+    df.drop(['Column1'],axis=1,inplace=True)
+    df['DEAL_YMD'] = df['DEAL_YMD'].astype(str)
+    df = df[~df['DEAL_YMD'].str.startswith('2019')]
+    df = df[~df['DEAL_YMD'].str.startswith('2024')]
+    df= df.drop_duplicates()
+    df['Pyeong']=df['BLDG_AREA']/3.3
+    df['Pyeong']=df['Pyeong'].astype('int64')
+    df['Pyeong_range']=df['Pyeong'].apply(Range)
+
+    return df
+
+```
 
 ## 코드 에러 문의 
-- `권장방법` : 메뉴 `Issues`-`New Issues`-`메모 남기기`-`Submit new issue`
-- Sara : tkfk418@naver.com
-- Evan : jhjung@dschloe.com
+- 메뉴 `Issues`-`New Issues`-`메모 남기기`-`Submit new issue`
 
 
 # 발표자료 PDF 
