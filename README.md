@@ -4,11 +4,11 @@
 
 ## 팀원 소개
 - 나한울 팀장 : 깃허브 주소 공유
-- 김영환 팀원 : https://github.com/younghwangit/
+- 김영환 팀원 : https://github.com/younghwangit/RealEstateTrackerSeoul
 - 양인선 팀원 : 깃허브 주소 공유
 - 이상훈 팀원 : 깃허브 주소 공유
 - 정소영 팀원 : 깃허브 주소 공유
-- 황유진 팀원 : https://github.com/yellayujin/
+- 황유진 팀원 : https://github.com/yellayujin/RealEstateTrackerSeoul
 
 
 
